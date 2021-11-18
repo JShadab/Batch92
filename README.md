@@ -194,7 +194,7 @@ $ git branch develop
 
 How to list all branch names:
 ---------------------------------
-$ git branch
+$ git branch <br>
   develop
 * main
 
