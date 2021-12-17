@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.8.3
+Built-By: user
+Build-Jdk: 11.0.2
+Class-Path: lib/mysql-connector-java-8.0.27.jar lib/protobuf-java-3.11.4
+ .jar
+Main-Class: org.shad.SelectDemo
+
