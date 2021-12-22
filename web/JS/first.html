@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Demo</title>
+
+    <script>
+        function sayHello() {
+            //console.log('Hello From Function');
+            alert("Hello From Function");
+        }
+        function add() {
+            var first =  Number(document.getElementById('first').value);
+            var second = Number(document.getElementById('second').value);
+            alert("Addition Result is : " + (first + second));
+        }
+        function sub() {
+            var first =  Number(document.getElementById('first').value);
+            var second = Number(document.getElementById('second').value);
+            alert("Subtraction Result is : " + (first - second));
+        }
+        function mul() {
+            var first =  Number(document.getElementById('first').value);
+            var second = Number(document.getElementById('second').value);
+            alert("Multiplication Result is : " + (first * second));
+        }
+        function div() {
+            var first =  Number(document.getElementById('first').value);
+            var second = Number(document.getElementById('second').value);
+            alert("Division Result is : " + (first / second));
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h2>Calculator</h2>
+
+    First Number: <input type="number" id="first"> <br>
+    Second Number: <input type="number" id="second"> <br>
+
+    <input type="button" value="+" onclick="add()">
+    <input type="button" value="-" onclick="sub()">
+    <input type="button" value="*" onclick="mul()">
+    <input type="button" value="/" onclick="div()">
+
+</body>
+
+</html>
