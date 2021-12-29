@@ -4,11 +4,12 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.shad.SpringBootRest.entity.Customer;
 import com.shad.SpringBootRest.service.CustomerService;
-
+@RequestMapping("/api")
 @RestController
 public class CustomerController {
 
