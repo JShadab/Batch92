@@ -31,9 +31,9 @@ function createTable(jsonStr) {
         const cell3 = document.createElement('td');
         cell3.innerHTML = obj.source;
         const cell4 = document.createElement('td');
-        cell3.innerHTML = obj.destination;
+        cell4.innerHTML = obj.destination;
         const cell5 = document.createElement('td');
-        cell3.innerHTML = obj.ticketPrice;
+        cell5.innerHTML = obj.ticketPrice;
 
         row.appendChild(cell1);
         row.appendChild(cell2);
