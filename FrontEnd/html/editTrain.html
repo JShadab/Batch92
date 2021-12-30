@@ -49,10 +49,10 @@
             background-color: black;
         }
     </style>
+
 </head>
 
 <body>
-
 
     <form style="text-align:center;" class="container" id="frm">
 
@@ -136,6 +136,40 @@
                 //   form.submit();
             }
         }
+
+        async function callApiForTrainDataUsingTrainNumber(trainNumber) {
+
+            let url = "http://localhost:9191/api/train/" + trainNumber;
+
+            let response = await fetch(url);
+            let jsonStr = await response.text();
+            console.log(jsonStr);
+
+            const trainObj = JSON.parse(jsonStr);
+
+            return trainObj;
+        }
+
+        function getTrainData() {
+
+            const queryString = window.location.search;
+            console.log(queryString);
+
+            const urlParams = new URLSearchParams(queryString);
+
+            const trainNumber = urlParams.get('id')
+            console.log(trainNumber);
+
+            const trainObj = callApiForTrainDataUsingTrainNumber(trainNumber);
+
+            document.getElementById("1").value = trainObj.trainNo;
+            document.getElementById("2").value = trainObj.trainName;
+            document.getElementById("3").value = trainObj.source;
+            document.getElementById("4").value = trainObj.destination;
+            document.getElementById("5").value = trainObj.ticketPrice;
+
+        }
+
 
     </script>
 </body>

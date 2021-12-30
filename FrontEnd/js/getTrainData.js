@@ -39,15 +39,18 @@ function createTable(jsonStr) {
         const btnBook = document.createElement('button');
         btnBook.classList.add('btn', 'btn-primary');
         btnBook.innerHTML = 'Book';
+        btnBook.addEventListener("click", showBookingPage, false);
 
         const btnEdit = document.createElement('button');
         btnEdit.innerHTML = 'Edit';
         btnEdit.classList.add('btn', 'btn-success');
         btnEdit.innerHTML = 'Edit';
+        btnEdit.addEventListener("click", showEditPage(1002));
 
         const btnDelete = document.createElement('button');
         btnDelete.classList.add('btn', 'btn-danger');
         btnDelete.innerHTML = 'Delete';
+        btnDelete.addEventListener("click", showDeletePage());
 
         cell6.appendChild(btnBook);
         cell6.appendChild(btnEdit);
@@ -62,6 +65,16 @@ function createTable(jsonStr) {
 
 
         tableBody.appendChild(row);
+    }
+
+    function showBookingPage() {
+        window.location.href = "http://127.0.0.1:5500/html/bookticket.html";
+    }
+    function showEditPage(trainNo) {
+        window.location.href = "http://127.0.0.1:5500/html/editTrain.html?id=" + trainNo;
+    }
+    function showDeletePage() {
+        window.location.href = "http://127.0.0.1:5500/html/deletetrain.html";
     }
 }
 
