@@ -13,30 +13,6 @@
         crossorigin="anonymous"></script>
     <title>Show Trains</title>
     <style>
-        h1 {
-            text-align: left;
-            color: rgb(236, 26, 26);
-            text-align: center;
-
-        }
-
-        h2 {
-            margin-top: 150px;
-            color: blue;
-            text-align: center;
-        }
-
-        body {
-            background-image: url('https://images.pexels.com/photos/1639418/pexels-photo-1639418.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        input {
-            text-align: center;
-            margin-top: 30px;
-        }
-
         label {
             margin-top: 50px;
             margin-left: 500px;
@@ -46,17 +22,23 @@
         footer {
             margin-top: 400px;
         }
+
+        h1 {
+            text-align: center;
+        }
     </style>
 
 </head>
 
 <body>
 
-    <h1>All Train Details</h1>
+
 
     <div id="train_details" class="container">
 
-        <table>
+        <h1>All Train Details</h1>
+
+        <table class=" table table-stripped">
             <thead>
 
                 <tr>
@@ -65,7 +47,8 @@
                     <th>Source</th>
                     <th>Destination</th>
                     <th>Fare</th>
-                 
+                    <th>Actions</th>
+
                 </tr>
 
             </thead>

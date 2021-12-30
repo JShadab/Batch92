@@ -35,11 +35,31 @@ function createTable(jsonStr) {
         const cell5 = document.createElement('td');
         cell5.innerHTML = obj.ticketPrice;
 
+        const cell6 = document.createElement('td');
+        const btnBook = document.createElement('button');
+        btnBook.classList.add('btn', 'btn-primary');
+        btnBook.innerHTML = 'Book';
+
+        const btnEdit = document.createElement('button');
+        btnEdit.innerHTML = 'Edit';
+        btnEdit.classList.add('btn', 'btn-success');
+        btnEdit.innerHTML = 'Edit';
+
+        const btnDelete = document.createElement('button');
+        btnDelete.classList.add('btn', 'btn-danger');
+        btnDelete.innerHTML = 'Delete';
+
+        cell6.appendChild(btnBook);
+        cell6.appendChild(btnEdit);
+        cell6.appendChild(btnDelete);
+
         row.appendChild(cell1);
         row.appendChild(cell2);
         row.appendChild(cell3);
         row.appendChild(cell4);
         row.appendChild(cell5);
+        row.appendChild(cell6);
+
 
         tableBody.appendChild(row);
     }
