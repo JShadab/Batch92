@@ -139,6 +139,8 @@
 
         async function callApiForTrainDataUsingTrainNumber(trainNumber) {
 
+            console.log('Data Fetching is started...');
+
             let url = "http://localhost:9191/api/train/" + trainNumber;
 
             let response = await fetch(url);
@@ -146,6 +148,14 @@
             console.log(jsonStr);
 
             const trainObj = JSON.parse(jsonStr);
+
+            console.log('Data Fetched Successfully...');
+
+            document.getElementById("1").value = trainObj.trainNo;
+            document.getElementById("2").value = trainObj.trainName;
+            document.getElementById("3").value = trainObj.source;
+            document.getElementById("4").value = trainObj.destination;
+            document.getElementById("5").value = trainObj.ticketPrice;
 
             return trainObj;
         }
@@ -162,15 +172,9 @@
 
             const trainObj = callApiForTrainDataUsingTrainNumber(trainNumber);
 
-            document.getElementById("1").value = trainObj.trainNo;
-            document.getElementById("2").value = trainObj.trainName;
-            document.getElementById("3").value = trainObj.source;
-            document.getElementById("4").value = trainObj.destination;
-            document.getElementById("5").value = trainObj.ticketPrice;
-
         }
 
-
+        getTrainData();
     </script>
 </body>
 

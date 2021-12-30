@@ -45,12 +45,12 @@ function createTable(jsonStr) {
         btnEdit.innerHTML = 'Edit';
         btnEdit.classList.add('btn', 'btn-success');
         btnEdit.innerHTML = 'Edit';
-        btnEdit.addEventListener("click", showEditPage(1002));
+        btnEdit.addEventListener("click", function () { showEditPage(obj.trainNo) });
 
         const btnDelete = document.createElement('button');
         btnDelete.classList.add('btn', 'btn-danger');
         btnDelete.innerHTML = 'Delete';
-        btnDelete.addEventListener("click", showDeletePage());
+        btnDelete.addEventListener("click", showDeletePage);
 
         cell6.appendChild(btnBook);
         cell6.appendChild(btnEdit);
